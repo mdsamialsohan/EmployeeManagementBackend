@@ -1,16 +1,21 @@
 {
   "name": "server",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --env-file=.env index.js"
+    "start": "nodemon --env-file=.env index.js",
+    "db:migrate": "supabase db push",
+    "db:new": "supabase migration new"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@supabase/supabase-js": "^2.50.2",
+    "dotenv": "^16.5.0",
     "express": "^5.1.0"
   },
   "devDependencies": {

@@ -1,6 +1,11 @@
 import { createClient } from "@supabase/supabase-js";
+import dotenv from "dotenv";
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+dotenv.config(); // Load .env file
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_SERVICE_ROLE_KEY // Use service role key for admin actions
+);
+
+export { supabase };
