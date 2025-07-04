@@ -8,4 +8,4 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY // Use service role key for admin actions
 );
 
-export { supabase };
+export default supabase;

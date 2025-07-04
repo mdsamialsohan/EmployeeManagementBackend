@@ -1,5 +1,5 @@
 // seedAdmin.js
-import { supabase } from "../utils/supabaseClient.js";
+import supabase from "../utils/supabaseClient.js";
 
 const seedAdmin = async () => {
   const email = "admin@abc.com";
